@@ -27,7 +27,7 @@ const team = [
   {
     badge: "ROLE C — DELIVERY",
     initial: "A",
-    image: "/team/arivuselvan.jpeg",
+    image: "/team/arivuselvan_v2.jpeg",
     name: "Arivuselvan",
     domain: "Frontend · UI/UX · Project Management",
     mission: "The Face and the Finish — translating logic into high-fidelity interfaces, managing timelines, and ensuring every delivery meets the Lancer Standard.",
