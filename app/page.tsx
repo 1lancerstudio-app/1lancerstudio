@@ -16,6 +16,14 @@ export default function Home() {
   const [isLoading, setIsLoading] = React.useState(false);
 
   React.useEffect(() => {
+    // Disable right-click on images
+    const handleContextMenu = (e: MouseEvent) => {
+      if ((e.target as HTMLElement).tagName === 'IMG') {
+        e.preventDefault();
+      }
+    };
+    document.addEventListener('contextmenu', handleContextMenu);
+    
     // Force scroll to top on every visit/refresh to ensure the Hero starts as intended
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
@@ -34,6 +42,8 @@ export default function Home() {
         return () => clearTimeout(timer);
       }
     }
+
+    return () => document.removeEventListener('contextmenu', handleContextMenu);
   }, []);
 
   return (

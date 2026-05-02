@@ -46,6 +46,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Image Download Protection */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
 /* Metallic noise texture overlay */
 body::before {
   content: '';
