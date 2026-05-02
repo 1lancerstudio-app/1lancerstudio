@@ -13,7 +13,8 @@ const team = [
     name: "Shreevatsan",
     domain: "Marketing · SEO · Business Architecture",
     mission: "Acts as the Top of the Funnel — identifying market gaps, designing ROI-first business logic, and bridging client problems to technical solutions.",
-    tags: ["SEO", "Business Architecture", "Growth Strategy", "Market Analysis"]
+    tags: ["SEO", "Business Architecture", "Growth Strategy", "Market Analysis"],
+    instagram: "https://www.instagram.com/shree_vatsan_257?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
   },
   {
     badge: "ROLE B — SYSTEMS",
@@ -22,7 +23,8 @@ const team = [
     name: "Nevan",
     domain: "Agentic AI · Backend · Security · LLM",
     mission: "The Brain of the operation — building complex Agentic logic, hardening backend security, and engineering systems that are unbreakable and fast.",
-    tags: ["Agentic Logic", "LLM Engineering", "API Infrastructure", "Database Security"]
+    tags: ["Agentic Logic", "LLM Engineering", "API Infrastructure", "Database Security"],
+    instagram: "https://www.instagram.com/soldmysoul14?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
   },
   {
     badge: "ROLE C — DELIVERY",
@@ -31,7 +33,8 @@ const team = [
     name: "Arivuselvan",
     domain: "Frontend · UI/UX · Project Management",
     mission: "The Face and the Finish — translating logic into high-fidelity interfaces, managing timelines, and ensuring every delivery meets the Lancer Standard.",
-    tags: ["Next.js", "React Three Fiber", "UI/UX", "Client Communication"]
+    tags: ["Next.js", "React Three Fiber", "UI/UX", "Client Communication"],
+    instagram: "https://www.instagram.com/xrivu.pvt?igsh=ZnlncWtla3B1ejFw"
   }
 ];
 
@@ -107,6 +110,15 @@ const Team = () => {
                   </span>
                 ))}
               </div>
+
+              <a 
+                href={member.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="mt-6 p-2 rounded-lg border border-glass hover:bg-glass transition-colors text-muted hover:text-chrome"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </a>
             </motion.div>
           ))}
         </motion.div>
