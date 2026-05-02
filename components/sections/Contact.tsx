@@ -54,15 +54,15 @@ const Contact = () => {
   };
 
   const sendEmail = () => {
-    const subject = `New Project Inquiry: ${formData.projectType.join(' / ')} – ${formData.company}`;
-    const body = `Hi ${formData.name},\n\nThank you for reaching out to Lancer Studio. We’ve received your project brief regarding the work for ${formData.company}, and it’s great to see what you’re building.\n\nBased on the details provided, here is a summary of the request we are currently reviewing:\n\nProject Type: ${formData.projectType.join(' / ')}\nPrimary Bottleneck: ${formData.message}\nContact Reference: ${formData.countryCode} ${formData.whatsapp}\n\nWe are diving into the specifics of your automation needs to see how we can best streamline your workflow. One of our team members will reach out via WhatsApp or email within the next 24–48 hours to discuss the next steps and potentially schedule a deep-dive call.\n\nIn the meantime, if you have any additional documents or specific technical requirements you'd like to share, feel free to reply directly to this thread.\n\nLooking forward to the possibility of working together.\n\nBest regards,\nThe Lancer Studio Team`;
+    const subject = `Project Inquiry: ${formData.projectType.join(' / ')} – ${formData.name} / ${formData.company}`;
+    const body = `Dear Lancer Studio Team,\n\nMy name is ${formData.name}, and I am writing to you on behalf of ${formData.company}.\n\nI am interested in collaborating with Lancer Studio on a new project. Below are the preliminary details of what we are looking for:\n\nProject Interest: ${formData.projectType.join(' / ')}\nThe Current Bottleneck: ${formData.message}\nPrimary Goal: To streamline and automate operations for ${formData.company}.\n\nI would appreciate it if we could schedule a brief consultation to discuss how your team can help us streamline this process. Please let me know your availability for a call or if you require any further documentation from our side.\n\nContact Details:\nEmail: ${formData.email}\nWhatsApp: ${formData.countryCode} ${formData.whatsapp}\n\nLooking forward to your response.\n\nBest regards,\n\n${formData.name}`;
     
     window.location.href = `mailto:1lancerstudio@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     resetForm();
   };
 
   const sendWhatsApp = () => {
-    const text = `Hi ${formData.name}! 👋\nThanks for reaching out to Lancer Studio. We just received your project brief for ${formData.company}.\n\nIt looks like you're looking for help with ${formData.projectType.join(' / ')} to handle your ${formData.message}.\n\nOur team is reviewing the details now. We’ll get back to you right here shortly to discuss how we can automate that for you!\n\nBest,\n[Lancer Studio]`;
+    const text = `Hi Lancer Studio Team,\nMy name is ${formData.name} from ${formData.company}. I’m reaching out because I’m interested in your services for:\n\n🚀 Project: ${formData.projectType.join(' / ')}\n⚙️ The Problem: ${formData.message}\n\nI’d like to discuss how you can help us automate this bottleneck. Looking forward to hearing from you!\n\nEmail: ${formData.email}\nWhatsApp: ${formData.countryCode} ${formData.whatsapp}`;
     
     window.open(`https://wa.me/918056139738?text=${encodeURIComponent(text)}`, '_blank');
     resetForm();
